@@ -1,0 +1,67 @@
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--background-color);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.conselhos-card {
+    background-color: var(--advice-card-color);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 540px;
+    max-height: 340px;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+.conselhos-card .counter-advice{
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: var(--advice-dice-color);
+}
+.conselhos-card .advice{
+    color: var(--text-color);
+    font-size: 27px;
+    text-align: center;
+    max-width: 440px;
+}
+.conselhos-card .divider{
+    padding-bottom: 40px;
+}
+.conselhos-card .divider::after{
+    content: url(../Image/pattern-divider-desktop.svg);
+}
+.conselhos-card .gerador{
+    width: 70px;
+    height: 70px;
+    background-color: var(--advice-dice-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 305px;
+}
+.conselhos-card .gerador::after{
+    content: url(../Image/icon-dice.svg);
+}
+.conselhos-card .gerador:active{
+    box-shadow: 0 0 45px var(--advice-dice-color);
+}
+
+@media (max-width: 768px) {  
+    .conselhos-card{
+        margin: 20px;
+    }
+    .conselhos-card .divider::after{
+        content: url(../Image/pattern-divider-mobile.svg);
+    }
+    .conselhos-card .advice{
+        font-size: 20px;
+        margin: 0 20px;
+    }
+}
